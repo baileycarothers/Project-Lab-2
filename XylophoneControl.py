@@ -12,6 +12,13 @@ welcomeTxt = Label(root, text = "Welcome!")
 lbl = Label(root, text = "Now Playing: Nothing")
 emptyTxt = Label(root, text = " ")
 
+cSharp = OutputDevice(17)
+
+def cSharpNote():
+	cSharp.on()
+	sleep(1)
+	cSharp.off()
+
 #Functions
 def closeWindow():
 	root.destroy()
@@ -27,6 +34,9 @@ def none():
 
 def playSong1():
 	lbl.configure(text = "Now Playing: Song 1")
+	cSharpNote()
+	sleep(3)
+	#Play other notes
 
 def playSong2():
 	lbl.configure(text = "Now Playing: Song 2")
